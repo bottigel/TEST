@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa privacy — Brain Controller v4</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65; max-width: 820px; margin: 0 auto; padding: 32px 20px 80px;
+    color: #1a1d21; background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e9ed; background: #14181d; }
+    td, th { border-color: #333b45 !important; }
+    th { background: #1e242b !important; }
+    .note { background: #1e242b !important; border-color: #333b45 !important; }
+    h2 { border-bottom-color: #333b45; }
+    .sub, footer { color: #97a1ad; }
+    hr { border-top-color: #333b45; }
+  }
+  h1 { font-size: 1.7rem; margin-bottom: .2em; }
+  h2 { font-size: 1.15rem; margin-top: 2em; border-bottom: 1px solid #d9dde2; padding-bottom: .3em; }
+  h3 { font-size: 1rem; margin-top: 1.4em; }
+  .sub { color: #6b7480; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .93rem; }
+  th, td { border: 1px solid #d9dde2; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f4f6f8; }
+  .note { background: #f4f6f8; border: 1px solid #d9dde2; border-radius: 8px; padding: 14px 16px; margin: 1.4em 0; }
+  code { font-size: .9em; }
+  hr { border: 0; border-top: 1px solid #d9dde2; margin: 3em 0; }
+  footer { color: #6b7480; font-size: .88rem; margin-top: 2em; }
+</style>
+</head>
+<body>
+
+<h1>Informativa sul trattamento dei dati personali</h1>
+<p class="sub">Applicazione <strong>Brain Controller v4</strong> (<code>com.oms.braincontrollerv4</code>) — versione del documento 1.0, ultimo aggiornamento 19 agosto 2026.</p>
+
+<p>Questa informativa descrive quali dati tratta l'applicazione Brain Controller v4 per Android, con
+quali finalità e per quanto tempo, ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR).</p>
+
+<h2>1. Titolare del trattamento</h2>
+<p>
+  Luca Bottigella<br>
+  Email di contatto: <a href="mailto:luca.bottigella@gmail.com">luca.bottigella@gmail.com</a>
+</p>
+<p>Per qualunque richiesta relativa ai dati trattati dall'applicazione è possibile scrivere all'indirizzo indicato.</p>
+
+<h2>2. A chi è destinata l'applicazione</h2>
+<p>Brain Controller v4 è uno strumento di lavoro destinato a personale tecnico: manutentori, collaudatori,
+centri di assistenza autorizzati e utilizzatori professionali delle macchine reggiatrici dotate di centralina
+Brain o Brain AXIS. Non è destinata al pubblico generale né a minori di 18 anni. Senza una macchina compatibile
+raggiungibile via Bluetooth l'applicazione non ha funzioni operative.</p>
+
+<h2>3. Dati trattati</h2>
+
+<table>
+  <thead>
+    <tr><th>Categoria</th><th>Contenuto</th><th>Finalità</th><th>Obbligatorio</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Credenziali di accesso</td>
+      <td>Nome utente e ruolo assegnato. La password non viene memorizzata in chiaro.</td>
+      <td>Autenticazione e determinazione delle funzioni consentite al ruolo.</td>
+      <td>Sì</td>
+    </tr>
+    <tr>
+      <td>Identificativo del dispositivo</td>
+      <td>Identificativo tecnico del telefono o tablet su cui l'app è installata.</td>
+      <td>Distinguere da quale dispositivo è stata eseguita un'operazione sulla macchina.</td>
+      <td>Sì</td>
+    </tr>
+    <tr>
+      <td>Registro delle attività</td>
+      <td>Operazioni di modifica eseguite sulla macchina: data e ora, utente, ruolo, parametro modificato,
+          valore precedente e successivo, esito. Vi rientrano anche accesso, disconnessione e tentativi
+          di operazione negati.</td>
+      <td>Tracciabilità tecnica degli interventi sulla macchina, ricostruzione dei guasti, sicurezza.</td>
+      <td>Sì</td>
+    </tr>
+    <tr>
+      <td>Dati di funzionamento della macchina</td>
+      <td>Contatori di produzione e di consumo, numeri di serie delle teste di reggiatura, andamenti storici
+          letti dalla centralina o dal tag NFC della testa.</td>
+      <td>Manutenzione predittiva e diagnostica della macchina.</td>
+      <td>Sì</td>
+    </tr>
+    <tr>
+      <td>Posizione approssimativa</td>
+      <td>Coordinate approssimative (precisione dell'ordine del chilometro) rilevate al momento della lettura
+          dei dati della macchina.</td>
+      <td>Sapere in quale stabilimento o cantiere si trova la macchina a cui i dati si riferiscono.</td>
+      <td><strong>No</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>Sulla posizione.</strong> La posizione è associata ai <em>dati della macchina</em>, non alle
+  operazioni dell'utente: nel registro delle attività il campo posizione resta sempre vuoto. Il permesso di
+  localizzazione è facoltativo: se viene negato, o se la localizzazione del dispositivo è disattivata,
+  l'applicazione continua a funzionare normalmente e i dati vengono salvati senza posizione. L'applicazione
+  non effettua alcun rilevamento di posizione in background: legge la posizione solo mentre è in uso e solo
+  quando sta acquisendo dati dalla macchina.
+</div>
+
+<h2>4. Dove finiscono i dati</h2>
+<p><strong>I dati restano sul dispositivo.</strong> Vengono salvati in un archivio locale interno
+all'applicazione e non vengono trasmessi ad alcun server, né dal titolare né da terzi. Non sono previsti
+backup automatici su servizi cloud: l'applicazione ha il backup di sistema disattivato.</p>
+
+<p>L'unica connessione a Internet effettuata dall'applicazione è il download dei manuali e dei video di
+manutenzione, che avviene tramite connessione cifrata (HTTPS) da un archivio pubblico ospitato su GitHub.
+In occasione di quel download il fornitore del servizio di hosting può registrare, nei propri log tecnici,
+l'indirizzo IP da cui la richiesta proviene. Con quella richiesta non viene inviato alcun dato dell'utente,
+della macchina o della posizione.</p>
+
+<h2>5. Permessi richiesti</h2>
+<table>
+  <thead><tr><th>Permesso</th><th>Perché serve</th></tr></thead>
+  <tbody>
+    <tr><td>Dispositivi nelle vicinanze (Bluetooth)</td><td>Trovare e collegarsi alla centralina della macchina. Dichiarato esplicitamente come non utilizzabile per ricavare la posizione.</td></tr>
+    <tr><td>Posizione approssimativa</td><td>Facoltativo. Associare i dati della macchina al luogo in cui la macchina si trova.</td></tr>
+    <tr><td>NFC</td><td>Leggere il tag della testa di reggiatura, funzione utilizzabile anche a macchina spenta.</td></tr>
+    <tr><td>Internet</td><td>Scaricare manuali e video di manutenzione.</td></tr>
+  </tbody>
+</table>
+
+<h2>6. Cosa l'applicazione non fa</h2>
+<ul>
+  <li>Non contiene pubblicità.</li>
+  <li>Non contiene strumenti di analisi statistica, tracciamento o profilazione di terze parti.</li>
+  <li>Non cede né vende dati a terzi.</li>
+  <li>Non effettua decisioni automatizzate che producano effetti giuridici sulle persone.</li>
+  <li>Non raccoglie rubrica, fotografie, microfono, fotocamera o cronologia di navigazione.</li>
+</ul>
+
+<h2>7. Base giuridica</h2>
+<p>Il trattamento si fonda sul <strong>legittimo interesse</strong> (art. 6.1.f GDPR) a garantire la
+tracciabilità tecnica degli interventi eseguiti su macchinari industriali, la ricostruzione dei guasti e la
+sicurezza di funzionamento. La rilevazione della posizione approssimativa avviene solo previo consenso
+esplicito prestato tramite il permesso di sistema Android, revocabile in qualsiasi momento dalle
+impostazioni del dispositivo.</p>
+
+<h2>8. Conservazione</h2>
+<p>I dati restano sul dispositivo finché l'applicazione è installata. La <strong>disinstallazione
+dell'applicazione elimina definitivamente</strong> l'archivio locale, registro delle attività compreso.
+È inoltre prevista una cancellazione automatica delle registrazioni più vecchie di dodici mesi.</p>
+
+<h2>9. Diritti dell'interessato</h2>
+<p>Agli interessati spettano i diritti previsti dagli articoli da 15 a 22 del GDPR: accesso, rettifica,
+cancellazione, limitazione, opposizione e portabilità. Poiché i dati risiedono unicamente sul dispositivo,
+le richieste possono essere soddisfatte direttamente sul dispositivo stesso; per assistenza è possibile
+scrivere all'indirizzo indicato al punto 1. È inoltre riconosciuto il diritto di proporre reclamo al
+Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>).</p>
+
+<h2>10. Modifiche</h2>
+<p>Questa informativa può essere aggiornata. È in valutazione l'attivazione futura di una piattaforma cloud
+per la raccolta centralizzata dei dati di manutenzione: prima che una simile funzione venga attivata questa
+informativa sarà aggiornata e agli utenti sarà data specifica evidenza della modifica all'interno
+dell'applicazione.</p>
+
+<hr>
+
+<h1 lang="en">Privacy Policy</h1>
+<p class="sub" lang="en"><strong>Brain Controller v4</strong> (<code>com.oms.braincontrollerv4</code>) — document version 1.0, last updated 19 August 2026.</p>
+
+<div lang="en">
+<h2>1. Data controller</h2>
+<p>Luca Bottigella — <a href="mailto:luca.bottigella@gmail.com">luca.bottigella@gmail.com</a></p>
+
+<h2>2. Who the app is for</h2>
+<p>Brain Controller v4 is a professional service tool for technicians, commissioning staff and authorised
+service centres operating industrial strapping machines fitted with a Brain or Brain AXIS controller. It is
+not intended for the general public or for users under 18. Without a compatible machine in Bluetooth range
+the app has no usable functions.</p>
+
+<h2>3. Data processed</h2>
+<ul>
+  <li><strong>Login credentials</strong> — user name and assigned role. Passwords are not stored in clear text. Purpose: authentication and role-based access.</li>
+  <li><strong>Device identifier</strong> — a technical identifier of the phone or tablet. Purpose: identifying which device performed an operation on the machine.</li>
+  <li><strong>Activity log</strong> — write operations performed on the machine: timestamp, user, role, parameter changed, previous and new value, outcome; plus login, logout and denied attempts. Purpose: technical traceability of maintenance work, fault reconstruction, security.</li>
+  <li><strong>Machine operating data</strong> — production and consumption counters, strapping head serial numbers, historical trends read from the controller or from the head NFC tag. Purpose: predictive maintenance and diagnostics.</li>
+  <li><strong>Approximate location</strong> — optional, kilometre-level accuracy, recorded when machine data is read. Purpose: knowing which site the machine data belongs to.</li>
+</ul>
+<p>Location is attached to <em>machine data</em>, never to user operations: the location field in the
+activity log is always empty. The location permission is optional; if denied, the app works normally and
+data is stored without location. No background location collection takes place.</p>
+
+<h2>4. Where the data goes</h2>
+<p>Data stays on the device, in the app's local storage, and is not transmitted to any server. System backup
+is disabled, so no automatic cloud copy is made. The app's only internet activity is downloading maintenance
+manuals and videos over HTTPS from a public repository hosted on GitHub; that hosting provider may record the
+requesting IP address in its technical logs. No user, machine or location data is sent with those requests.</p>
+
+<h2>5. Permissions</h2>
+<ul>
+  <li><strong>Nearby devices (Bluetooth)</strong> — finding and connecting to the machine controller; explicitly declared as never used to derive location.</li>
+  <li><strong>Approximate location</strong> — optional; associating machine data with the site where the machine is.</li>
+  <li><strong>NFC</strong> — reading the strapping head tag, which also works with the machine powered off.</li>
+  <li><strong>Internet</strong> — downloading maintenance manuals and videos.</li>
+</ul>
+
+<h2>6. What the app does not do</h2>
+<p>No advertising, no third-party analytics or tracking, no profiling, no sale or disclosure of data to third
+parties, no automated decision-making with legal effects, no access to contacts, photos, microphone, camera or
+browsing history.</p>
+
+<h2>7. Legal basis</h2>
+<p>Legitimate interest (Art. 6(1)(f) GDPR) in ensuring technical traceability of work carried out on
+industrial machinery, fault reconstruction and operational safety. Approximate location is collected only
+after explicit consent given through the Android system permission, which can be withdrawn at any time in
+device settings.</p>
+
+<h2>8. Retention</h2>
+<p>Data remains on the device for as long as the app is installed. <strong>Uninstalling the app permanently
+deletes</strong> the local storage, including the activity log. Records older than twelve months are deleted
+automatically.</p>
+
+<h2>9. Your rights</h2>
+<p>Rights under Articles 15 to 22 GDPR apply: access, rectification, erasure, restriction, objection and
+portability. As data resides only on the device, requests can be satisfied on the device itself; for
+assistance write to the address in section 1. You also have the right to lodge a complaint with the Italian
+Data Protection Authority (garanteprivacy.it).</p>
+
+<h2>10. Changes</h2>
+<p>This policy may be updated. A future cloud platform for centralised maintenance data collection is under
+evaluation; before any such feature is enabled this policy will be updated and users will be notified in the
+app.</p>
+</div>
+
+<footer>Brain Controller v4 — informativa privacy / privacy policy — v1.0, 19/08/2026.</footer>
+
+</body>
+</html>
